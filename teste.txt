@@ -1,0 +1,15 @@
+import { lp_solve } from 'lp_solve'; // Importe a biblioteca de programação linear
+
+// Defina o problema de programação linear
+const problema = {
+  objective: [-1, -1], // Coeficientes da função objetivo
+  constraints: [
+    { coefficients: [1, 2], rhs: 5 }, // Restrição 1
+    { coefficients: [3, 1], rhs: 6 }, // Restrição 2
+  ],
+};
+
+// Resolva o problema
+const resultado = lp_solve(problema);
+
+console.log(resultado); // Exiba o resultado no console ou faça o que desejar com ele
